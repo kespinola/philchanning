@@ -1,0 +1,13 @@
+//
+   Created by ksespinola on 5/10/14.
+
+mixin sidebar()
+  #Sidebar.active
+    .clearfix.pull-left
+     i#TogglePanel.fa.fa-bars.tab.pull-left.btn.fa-2x
+    .container-fluid.pull-right: .row
+      if block
+        block
+      else
+        p There is no page content to show. Come back soon :)
+

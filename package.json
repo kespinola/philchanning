@@ -1,23 +1,26 @@
 {
-  "name": "phil-channing-photgraphy",
-  "version": "0.0.0",
-  "private": true,
-  "dependencies": {
-    "keystone": "~0.2.6",
-    "async": "~0.2.9",
-    "underscore": "~1.5.2",
-    "dotenv": "0.0.3"
-  },
-  "engines": {
-    "node": ">=0.10.22",
-    "npm": ">=1.3.14"
-  },
-  "scripts": {
-    "start": "keystone.js"
-  },
-  "devDependencies": {
-    "gulp": "~3.6.0",
-    "gulp-jshint": "~1.5.1",
-    "gulp-livereload": "~1.2.0"
-  }
+    "name": "phil-channing-photgraphy",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "keystone": "~0.2.6",
+        "async": "~0.2.9",
+        "underscore": "~1.5.2",
+        "dotenv": "0.0.3"
+    },
+    "engines": {
+        "node": ">=0.10.22",
+        "npm": ">=1.3.14"
+    },
+    "scripts": {
+        "start": "app.js"
+    },
+    "devDependencies": {
+        "gulp": "~3.6.0",
+        "gulp-jshint": "~1.5.5",
+        "gulp-livereload": "~1.2.0",
+        "gulp-bower": "0.0.4",
+        "gulp-watch": "~0.6.4",
+        "gulp-mocha": "~0.4.1"
+    }
 }

@@ -1,19 +1,19 @@
 extends ../layouts/default
 
 block content
-  #contact.container-fluid
-    if enquirySubmitted
-      h3 Thanks for getting in touch.
-    else
-        .row
-          #map-canvas.pull-right
-
-          h2 Santa Barbara, CA
-          .col-xs-12.col-sm-4.pull-left
-            h1 Send a Message
+  #contact
+    h2 Santa Barbara, CA
+    #map-canvas
+    .container-fluid
+      .row
+        .main-module.no-float.col-xs-10.col-sm-8.col-md-6.col-lg-4
+          .icon
+          h1
+            | Contact
+          if enquirySubmitted
+            h3 Thanks for getting in touch.
+          else
             form(method='post')
-              p.
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               input(type='hidden', name='action', value='contact')
               .form-group(class=validationErrors.name ? 'has-error' : null)
                 input(type='text', name='name.full', value=formData['name.full'], required, placeholder='Name').form-control

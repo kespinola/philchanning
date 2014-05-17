@@ -6,8 +6,10 @@
 // the main bootstrap/bootstrap.less file.
 //
 // Bootstrap can be removed entirely by deleting this line.
-
+@import "site/lesshat.less";
 @import "bootstrap/bootstrap.less";
+@import "reset.less";
+@import "site/variables.less";
 
 // The easiest way to customise Bootstrap variables while
 // being able to easily override the source files with new
@@ -16,7 +18,6 @@
 // You can also add your own custom variables to this file for
 // use in your site stylesheets.
 
-@import "site/variables.less";
 
 
 // Site Styles
@@ -25,17 +26,133 @@
 // Add your own site style includes here
 @import "site/layout.less";
 
+.no-float{float:none;}
 
 //z=index
+#FullBg{z-index:-1}
 header{z-index:1000;}
-.page-title{z-index:300}
+#map-canvas{z-index:1;}
+body{z-index:2}
+.main-module{z-index:3;}
+.full-overlay{z-index:300}
+#module-spy{z-index:500}
+#Sidebar{z-index:600}
 
-body{height:100%; width:100vw}
+body{height:100%; width:100vw; padding-bottom:60px; overflow-x:hidden;}
 
+#FullBg{.size(100%,100%); position:fixed; top:0; left:0; background:rgba(241,241,241,.75);
+img{width:100%}
+}
+
+.full-overlay{.size(100%, 100%); position:absolute; left:0; top:0; background:rgba(41,41,41, 0.5); .transition(.7s all ease-in-out);
+  &.active{top:-5000px;}
+}
+
+h1{margin:5px 0 10px 0; font-weight:200; text-transform:capitalize;}
 //Navigation stylings
-.navbar-default{background:@nav-bg; border:none;}
+.navbar-default{background:@nav-bg; border:none;
+  .navbar-toggle{border-color:@nav-bg;
+    &:focus{background-color:@nav-bg; .opacity(.7)}
+    &:hover{background-color: @nav-bg; .opacity(.7) }
+  }
+  .navbar-nav{
+    >li>a{ background:none !important;
+      &:hover{background:#2C2C2C; color:#e4e4e4}
+    }
+    >.active>a{color:#CFCDCD; border-top:4px solid @nav-active; padding-top:10px;
+      &:hover{color:#CACACA; }
+    }
+  }
+}
 .form-control{.box-shadow(none)}
+.icon{.border-radius(100px); .square(125px); background:url('/images/email-icon.png') center no-repeat rgba(44, 43, 43, 0.75);  border:2px solid #524F4F; margin:15px auto 0 auto;}
+
+.secondary-nav{ position:absolute; top:0; width:100%; .transition(top 2s ease); border-bottom:4px solid @body-bg;
+  .navbar-header{padding-right:30px;}
+  &.active{top:0;}
+  .navbar-spy{
+    .navbar-nav{
+      li{
+        &.active > a{ border-top:none; border-bottom:4px solid @nav-active;}
+      }
+    }
+  }
+
+}
+
+.jumbotron{padding-top:100px;
+  img{border: 4px solid @brand-primary;}
+  .transition(top 3s ease); position:fixed; background:none; z-index:500; width:100%; background:rgba(63,63,63,.3); height:55vh; top:0; border-bottom:4px solid @brand-primary;
+  &.active{top:-600px}
+}
+
+#spy{padding-top:60px;
+  h3{font-size:2em}
+  section{ margin-top:5%;
+    &:first-child{margin-top:0}
+  }
+}
+
+.cycle-slideshow{height:100%;
+  div {position:absolute; left:0; top:0; background-position:center; background-size: cover; width:100%; height:100%;}
+}
+
+
+#Slideshow{position:relative; width:75%; height:30vw; overflow:hidden; margin:0 auto;
+      .clearfix{width:53px; height:100vh;}
+      img{width:100%}
+}
+
+#Sidebar{  position:fixed; top:0; right:-255px; width:310px; height:100vh; .transition(all .75s ease-in-out); .opacity(1);
+  &.active{right:0;}
+  &.hide{.opacity(0)}
+  .container-fluid{background:rgba(63,63,63,.5); height:100vh;
+    .row{padding:21px 0 0; width:257px;}
+  }
+  .btn{background:@nav-bg; border-bottom-right-radius: 0; border-top-right-radius:0; margin:15px 0 0 0;
+    &.fa{color:@white}
+  }
+
+}
+
+.page-animation-up{
+  top:2000px; .transition(top 2s ease-in-out);
+  &.active{top:0;}
+}
+
+#module-spy{position:fixed; width:inherit; .page-animation-up(); border-bottom:none;}
+
+
+.main-module{background:rgba(63,63,63,.5); margin:60px auto 0 auto; padding:10px 0; border-top-left-radius:10px; border-top-right-radius:10px; .opacity(1); .page-animation-up();
+  &.active{top:0;}
+  &.hide-page{.opacity(0)}
+}
+.top-bg-banner{ position:fixed; top:0; left:0; width:100%; height: 55vh; overflow:hidden; text-align:center;
+  img {width:100%}
+  h1{position:fixed;}
+}
+
+.card{position:relative; margin-bottom:10%; .border-radius(5px); background:rgba(73,70,70,.8); overflow:hidden; border:1px solid #493F3F;
+  .banner{position:relative; overflow:hidden; height:115px; width:100%;
+    &.lg-banner{height:175px}
+    &.sm-banner{height:100px}
+    .icon-btn{.opacity(.45); position:absolute; top:10px; right:10px;
+      &.active{background: @brand-secondary;}
+      }
+    }
+  h1{ position:relative; background:rgba(153, 149, 149, 0.36); margin:0; font-size:1em; text-align:center; padding:5px 0; color:@body-bg; border-top:1px solid #493F3F; }
+  .overlay{.transition(left .5s ease-in-out); position:absolute; top:0; left:-1500px; width:100%; height:100%; margin:0 auto; padding:5%; background:rgba(58,51,51,.9); overflow:scroll;
+    &.active{ left:0;}
+  }
+  .btn-info{margin:11px 0 0 0;}
+}
+
+
+
+.icon-btn{.border-radius(4px); background:@body-bg; padding:11px; z-index:300; cursor:pointer;}
 
 
 //Add contact styles
 @import 'site/contact.less';
+@import 'site/about.less';
+@import 'site/gallery.less';

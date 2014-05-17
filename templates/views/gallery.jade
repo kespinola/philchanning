@@ -1,25 +1,37 @@
-extends ../layouts/default
+//
+   Created by ksespinola on 5/13/14.
 
-block intro
-	.container
-		h1 Gallery
-	
+extends ../layouts/default
+include ../mixins/bootstap-carousel
+include ../mixins/cycle2
+include ../mixins/sidebar
 block content
-	.container
-		if galleries.length
-			each gallery in galleries
-				h2= gallery.name
-					if gallery.publishedDate
-						.pull-right.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
-				
-				.row.gallery-images
-					if gallery.heroImage.exists
-						.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680)).img-rounded
-						.col-sm-8.col-md-8: .row
-							each image in gallery.images
-								.col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
-					else
-						each image in gallery.images
-							.col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
-		else
-			h3.text-muted There are no image galleries yet.
+  - var mainGallery = galleries[0]
+  +cycle2(mainGallery.images, 'FullBg', true)
+  #Gallery
+    i#ShowGallery.toggle-page.fa.fa-bookmark.fa-4x.toggle-page
+    #Prev.fa.fa-chevron-right.fa-4x.btn
+    #Next.fa.fa-chevron-left.fa-4x.btn
+    .main-module.no-float.col-xs-8.col-sm-10
+      nav.secondary-nav.navbar.navbar-default.navbar-static.col-xs-10.col-md-8.col-lg-10(role='navigation')
+        i#HideGallery.toggle-page.fa.fa-times.pull-right.fa-3x.btn.toggle-page
+        .container-fluid
+          .navbar-header
+            h1
+              | Gallery
+      +cycle2(mainGallery.images, 'Slideshow', false)
+      #Info
+        .container-fluid: .row
+          .col-sm-4
+            h1#title= mainGallery.name
+            h2#date= mainGallery._.publishedDate.format('Do MMM YYYY')
+          .col-sm-8
+            p#blurb= mainGallery.blurb.Type.md
+  +sidebar()
+    each gallery in galleries
+      .col-xs-10.no-float.center
+        article.card.item-thumb(data-id="#{gallery._id}")
+          .banner.full-center-bg.sm-banner(style='background-image: url(#{gallery.heroImage.url})')
+          h1= gallery.name
+  +cycle2-template()
+  +pager-template()

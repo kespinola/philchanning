@@ -1,5 +1,41 @@
 extends ../layouts/default
+include ../mixins/experience
+include ../mixins/client
+include ../mixins/scrollspy-page
 
 block content
-  .container
-    p This is the about page
+  #About
+    .jumbotron(data-auto='false'): .container-fluid
+      .row
+        .col-xs-5.col-xs-offset-1.col-sm-4.col-sm-offset-1.col-md-4.col-md-offset-1
+          img(src= page._.profileImage.limit(200,200)).img-circle.img-responsive
+        .col-xs-5.col-sm-6.col-md-6.left-border
+          blockquote
+            h1
+              |"#{page.tagline}"
+    .top-bg-banner.full-center-bg(style="background-image:url(#{page.images[0].url})")
+    +scrollspy-page(page)
+      if sections.length
+        section#sections
+          .row.clearfix
+            each section in sections
+              article.col-sm-12
+                h1= section.label
+                p!= section.blurb
+      if clients.length
+        section#clients
+          h1
+            | Clients
+          .row.clearfix
+            each client in clients
+              +client(client)
+      if experiences.length
+        section#experiences
+          h1
+            | Experiences
+          .row.clearfix
+            each experience in experiences
+              +experience(experience)
+
+block js
+  script(src='/js/views/about.js')

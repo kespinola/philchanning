@@ -1,0 +1,23 @@
+{
+  "name": "philchanning.com",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ksespinola/philchanning",
+  "authors": [
+    "Kyle Espinola <ksespinola@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "jquery": "latest",
+      "underscore-amd":"latest",
+      "requirejs":"latest",
+      "bootstrap":"latest",
+      "fontawesome":"latest"
+  }
+}

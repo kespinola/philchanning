@@ -1,0 +1,21 @@
+@import "./lesshat.less";
+@import "../bootstrap/bootstrap.less";
+@import "../reset.less";
+@import "variables.less";
+
+#About{
+  .jumbotron{
+    img{float:right;}
+  }
+  #bio{ .transition(all 1s ease-in-out); position:fixed; color:@body-bg; top:-500px;
+    &.active{top:45px;}
+    .row{text-align:center;
+      .col-sm-3:last-child{margin-right:15px;}
+    }
+    img{width:200px; border:3px solid @body-bg;}
+  }
+  #clients{
+    .card{height:210px;}
+  }
+  .main-module{margin-top:0}
+}

@@ -1,0 +1,35 @@
+//Created by ksespinola on 5/8/14.
+mixin checkContent(page)
+  if page.sections.length
+    li
+      a(href="#sections")
+        | Me
+  if page.clients.length
+    li
+      a(href="#clients")
+        | Clients
+  if page.experiences.length
+    li
+      a(href="#experiences")
+        | Experiences
+
+mixin scrollspy-page(page)
+  .main-module.no-float.col-xs-10.col-md-8.col-lg-10
+    nav.secondary-nav.navbar.navbar-default.navbar-static.col-xs-10.col-md-8.col-lg-10(id='module-spy', role='navigation')
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-spy')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      .container-fluid
+        .navbar-header
+          h1=page.pagename
+        .collapse.navbar-spy.navbar-collapse
+          ul.nav.navbar-nav
+            +checkContent(page)
+    #spy
+      .container-fluid
+        if block
+          block
+        else
+          p There is no page content to show. Come back soon :)

@@ -1,6 +1,7 @@
 // Override Bootstrap variables in this file, e.g.
+@import "lesshat.less";
 
-@font-size-base: 14px;
+@font-size-base: 16px;
 @body-bg: #3A3333;
 @gray-dark:#DADADA;
 @nav-bg:#3F3F3F;
@@ -8,7 +9,33 @@
 @input-border:#2B2B2B;
 @navbar-default-link-color:#B8B8B8;
 @navbar-default-link-hover-color:#DFDFDF;
+@brand-primary:#475E88;
+@nav-active: #6988C0;
+@brand-info: @body-bg;
+@brand-secondary:#4E4E4E;
+@bg-secondary: @brand-secondary;
+@brand-success: #6988c0;
+@white: #fff;
+
+.btn{.opacity(.7);
+  &:hover{.opacity(.5)}
+}
 
 .full-width{
   width:100%;
 }
+
+.center{text-align:center;}
+.full-center-bg{background-repeat:no-repeat; .background-size(cover); background-position:center center;}
+.left-border(@size: 4px, @color: @brand-primary){
+  border-left: @size solid @color;
+}
+
+.left-border{ .left-border();}
+
+.form-control{background:rgba(61,61,61,.65)}
+
+.fa{color:rgba(216, 216, 216, 0.5)}
+
+.center{text-align: center; margin:0 auto;}
+

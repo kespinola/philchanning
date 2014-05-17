@@ -1,3 +1,4 @@
+"use strict";
 /**
  * This file is where you define your application routes and controllers.
  * 
@@ -29,17 +30,20 @@ keystone.pre('render', middleware.flashMessages);
 
 // Import Route Controllers
 var routes = {
-	views: importRoutes('./views')
+	views: importRoutes('./views'),
+    api: importRoutes('./api')
 };
 
 // Setup Route Bindings
 exports = module.exports = function(app) {
-	
+
 	// Views
 	app.get('/', routes.views.gallery);
 	app.get('/gallery', routes.views.gallery);
     app.get('/about', routes.views.about);
     app.all('/contact', routes.views.contact);
+
+    app.get('/api/gallery/:id', keystone.initAPI, routes.api.galleries.get);
 
 
 	

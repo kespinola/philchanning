@@ -1,0 +1,28 @@
+extends ../layouts/default
+include ../mixins/bootstap-carousel
+include ../mixins/cycle2
+
+block content
+  - var mainGallery = galleries[0]
+  script(type='text/javascript')
+  #Gallery
+    #Covers: .container-fluid
+      .row
+        each gallery in galleries
+          .col-sm-10.col-sm-offset-1
+            article.card.item-thumb(data-id="#{gallery._id}")
+              .banner.full-center-bg.lg-banner(style='background-image: url(#{gallery.heroImage.url})')
+              h1= gallery.name
+    +cycle2(mainGallery.images)
+    #Info
+      .container-fluid: .row
+        .col-sm-4
+          h1#title= mainGallery.name
+          h2#date= mainGallery._.publishedDate.format('Do MMM YYYY')
+        .col-sm-8
+          p#blurb= mainGallery.blurb.Type.md
+  +cycle2-template()
+  +pager-template()
+
+
+

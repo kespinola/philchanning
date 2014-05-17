@@ -9,7 +9,9 @@ Gallery.add({
 	name: { type: String, required: true },
 	publishedDate: { type: Date, default: Date.now },
 	heroImage: { type: Types.CloudinaryImage },
-	images: { type: Types.CloudinaryImages }
+    shortBlurb:{type: Types.Text},
+	images: { type: Types.CloudinaryImages },
+    blurb: {Type: Types.Markdown}
 });
 
 Gallery.register();

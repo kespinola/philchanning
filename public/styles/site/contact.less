@@ -1,11 +1,9 @@
 #contact{
-  #map-canvas{height:25vh; width:100%;}
-  form{position:relative;}
-  h2{position:fixed; top:10px; right:20px;}
-}
-
-@media (min-width:768px){
-  #contact{
-    #map-canvas{width:66%; height:100vh; }
+  .main-module{padding:20px}
+  #map-canvas{position:fixed!important; top:0; left:0; width:100vw; height:100vh;}
+  h2{ position:relative; font-size:45px; text-align:center; z-index:5;
+    @media (min-width:1200px){
+      position:fixed; top:10px; right:20px;
+    }
   }
 }
