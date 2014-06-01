@@ -8,24 +8,19 @@ include ../mixins/sidebar
 block content
   - var mainGallery = galleries[0]
   +cycle2(mainGallery.images, 'FullBg', true)
-  #Gallery
-    i#ShowGallery.toggle-page.fa.fa-bookmark.fa-4x.toggle-page
-    #Prev.fa.fa-chevron-right.fa-4x.btn
+  #Gallery.overflow-hidden
     #Next.fa.fa-chevron-left.fa-4x.btn
-    .main-module.no-float.col-xs-8.col-sm-10
+    #Prev.fa.fa-chevron-right.fa-4x.btn
+    .main-module.col-sm-offset-2.col-sm-6.col-md-8.active.hidden-xs
       nav.secondary-nav.navbar.navbar-default.navbar-static.col-xs-10.col-md-8.col-lg-10(role='navigation')
-        i#HideGallery.toggle-page.fa.fa-times.pull-right.fa-3x.btn.toggle-page
         .container-fluid
           .navbar-header
-            h1
-              | Gallery
-      +cycle2(mainGallery.images, 'Slideshow', false)
+            h1#title= mainGallery.name
+      .cycle-pager
       #Info
         .container-fluid: .row
-          .col-sm-4
-            h1#title= mainGallery.name
+          .col-sm-12
             h2#date= mainGallery._.publishedDate.format('Do MMM YYYY')
-          .col-sm-8
             p#blurb= mainGallery.blurb.Type.md
   +sidebar()
     each gallery in galleries

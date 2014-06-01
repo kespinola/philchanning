@@ -3,26 +3,20 @@
 
 mixin cycle2(images, id, overlay)
   div(id='#{id}')
-
     -if(overlay == true){
-      .full-overlay
+      .full-overlay.active
     -}
-    .cycle-slideshow(data-cycle-fx='scrollHorz', data-cycle-speed='500', data-cycle-slides='div',
-      data-cycle-pager='.cycle-pager',
-
-      data-cycle-prev='#Prev', data-cycle-next='#Next', data-cycle-timeout='0')
+    .slideshow(data-cycle-center-horz="true", data-cycle-center-vert="true")
       each image in images
-        .cycle-slide(style='background-image:url(#{image.url})', data-cycle-pager-template='<a href="#"><img src="#{image.url}" width=100 height=100></a>')
-    -if(id != 'FullBg'){
-      .cycle-pager
-    -}
+        img.cycle-slide(src= image.url)
+
 mixin cycle2-template()
   script(id="cycle2-template").
     <% _.each(images, function(image){ %>
-     <div class="cycle-slide" style="background-image:url(<%= image.url %>)"></div>
+     <img src="<%= image.url %>" class="cycle-slide">
     <% }) %>
 mixin pager-template()
   script(id="pagers-template").
     <% _.each(images, function(image){ %>
-      <a href="#"><img src="<%= image.url %>" width=100 height=100></a>
+        <a href="#"><img src="<%= image.url %>" class="img-responsive" width=250 height=250></a>
     <% }) %>

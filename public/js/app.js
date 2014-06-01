@@ -1,34 +1,40 @@
 var $document = $(document);
 var $window = $(window);
+var app = window.app = new App();
 
 
 function App() {
 
     this.$header = $('header');
 
+    this.app = this;
+
     this.$page = $('.main-module');
 
     this.$sidebar = $('#Sidebar');
 
+
     this.slideshow = {
-        $el: $('.cycle-slideshow'),
+        $el: $('.slideshow'),
         title: $('#title'),
         blurb: $('#blurb'),
         date: $('#date'),
         $pagers: $('.cycle-pager'),
         slidesTemplate: $('#cycle2-template').html(),
         pagersTemplate: $('#pagers-template').html(),
+
         options: {
             fx:'scrollHorz',
-            speed:'500',
-            slides:'div',
+            speed:500,
+            slides:'> img',
             pager:'.cycle-pager',
-            pagerTemplate:"<a href='#' ><img src={{src}} width=100 height=100></a>",
             prev:'#Prev',
             next:'#Next',
-            log: false,
-            timeout:0
-
+            timeout:0,
+            swipe:true,
+            pagerTemplate:"<a href='#'><img src='{{src}}' class='img-responsive' width=250 height=250></a>",
+            centerHorz:true,
+            centerVert:true
         }
     };
 
@@ -37,6 +43,7 @@ function App() {
     this.initialize = function () {
         this.activateSlideshow();
         this.startAnimation();
+        this.onResize();
 
     };
 
@@ -69,15 +76,15 @@ function App() {
     };
 
     this.toggleFullView = function(){
-        this.$page.toggleClass('hide-page');
-        $('#ShowGallery').toggleClass('active');
-        $('.full-overlay').toggle('active');
-        $('#Sidebar').toggle('hide');
+        this.$page.toggleClass('active');
+        $('.full-overlay').toggleClass('active');
+        $('#Gallery').toggleClass('overflow-hidden');
 
     };
 
     this.activateSlideshow = function () {
         var _self = this;
+        console.log(this.slideshow.$el, this.slideshow.options);
         this.slideshow.$el.length ? this.slideshow.$el.cycle(this.slideshow.options) : false;
     };
 
@@ -106,10 +113,10 @@ function App() {
 
 
         var parsedSlidesTemplate = _.template(slideshow.slidesTemplate, {images: gallery.images });
-        var parsedPagersTemplate = _.template(slideshow.pagersTemplate, {images: gallery.images });
+
 
         slideshow.$el.html(parsedSlidesTemplate);
-        slideshow.$pagers.html(parsedPagersTemplate);
+        this.setSlideshowDemensions();
 
 
         this.activateSlideshow();
@@ -120,23 +127,36 @@ function App() {
         var $activeOverlay = $('.overlay[data-id="' + id + '"]');
             $('.overlay').removeClass('active');
             $activeOverlay.addClass('active');
-    }
+    };
 
     this.toggleSidebar = function(){
         this.$sidebar.toggleClass('active');
-    }
+    };
+
+
+    this.onResize = function(){
+        this.slideshow.$el.length ? this.setSlideshowDemensions() : '';
+    };
+
+
+    this.setSlideshowDemensions = function(){
+        var height = $window.height() - this.$header.height();
+
+        this.slideshow.$el.css({height: height})
+    };
+
+
 
 }
 
 $document.ready(function () {
-    $('window').scrollTop(0);
-    window.app = new App();
+    $window.scrollTop(0);
     app.initialize();
 });
 
 $document.on('click', '.item-thumb', function (e) {
     var id = $(this).data('id');
-    window.app.getGallery(id);
+    app.getGallery(id);
 });
 
 $document.on('click', '.icon-btn', function (e) {
@@ -154,10 +174,11 @@ $document.on('click', '.icon-btn', function (e) {
     }
 });
 
-$document.on('click','.toggle-page', function(e) {
-    app.toggleFullView();
+$window.resize(function(){
+    app.onResize();
 });
 
 $document.on('click', '#TogglePanel', function(e){
    app.toggleSidebar();
+   app.toggleFullView();
 });

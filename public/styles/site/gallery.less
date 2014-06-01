@@ -3,7 +3,8 @@
 @import "../reset.less";
 @import "variables.less";
 
-#Gallery{
+#Gallery{position:absolute; .size(100%,100%);
+  &.overflow-hidden{overflow: hidden;}
   #ShowGallery{position:fixed; right:20px; .opacity(0); .transition(.3s all ease); cursor:pointer;
     &.active{.opacity(1)}
     &:hover{padding-top:15px;}
