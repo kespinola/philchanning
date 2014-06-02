@@ -1,6 +1,6 @@
 {
   "name": "philchanning.com",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/ksespinola/philchanning",
   "authors": [
     "Kyle Espinola <ksespinola@gmail.com>"
@@ -11,13 +11,17 @@
     "node_modules",
     "public/js/lib",
     "test",
-    "tests"
+    "tests",
+    "bower_components"
   ],
   "dependencies": {
-      "jquery": "latest",
-      "underscore-amd":"latest",
-      "requirejs":"latest",
-      "bootstrap":"latest",
-      "fontawesome":"latest"
-  }
+    "gsap": "~1.11.8",
+    "jquery-cycle2": "~2.1.5",
+    "masonry": "~3.1.5",
+    "moment": "~2.6.0",
+    "underscore": "~1.6.0"
+  },
+  "description": "website for photographer Phil Channing.",
+  "main": "The main endpoint of frontend components.",
+  "private": true
 }

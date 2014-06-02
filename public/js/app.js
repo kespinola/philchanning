@@ -79,12 +79,11 @@ function App() {
         this.$page.toggleClass('active');
         $('.full-overlay').toggleClass('active');
         $('#Gallery').toggleClass('overflow-hidden');
+        $('.direction-btn').toggleClass('hidden');
 
     };
 
     this.activateSlideshow = function () {
-        var _self = this;
-        console.log(this.slideshow.$el, this.slideshow.options);
         this.slideshow.$el.length ? this.slideshow.$el.cycle(this.slideshow.options) : false;
     };
 

@@ -9,19 +9,20 @@ block content
   - var mainGallery = galleries[0]
   +cycle2(mainGallery.images, 'FullBg', true)
   #Gallery.overflow-hidden
-    #Next.fa.fa-chevron-left.fa-4x.btn
-    #Prev.fa.fa-chevron-right.fa-4x.btn
-    .main-module.col-sm-offset-2.col-sm-6.col-md-8.active.hidden-xs
-      nav.secondary-nav.navbar.navbar-default.navbar-static.col-xs-10.col-md-8.col-lg-10(role='navigation')
-        .container-fluid
-          .navbar-header
-            h1#title= mainGallery.name
-      .cycle-pager
-      #Info
-        .container-fluid: .row
-          .col-sm-12
-            h2#date= mainGallery._.publishedDate.format('Do MMM YYYY')
-            p#blurb= mainGallery.blurb.Type.md
+    #Next.fa.fa-chevron-left.fa-4x.btn.direction-btn
+    #Prev.fa.fa-chevron-right.fa-4x.btn.direction-btn
+    .container-fluid: .row
+      .main-module.col-sm-10.no-float.active.hidden-xs
+        nav.secondary-nav.navbar.navbar-default.navbar-static.col-xs-10.col-md-8.col-lg-10(role='navigation')
+          .container-fluid
+            .navbar-header
+              h1#title= mainGallery.name
+        .cycle-pager
+        #Info
+          .container-fluid: .row
+            .col-sm-12
+              h2#date= mainGallery._.publishedDate.format('Do MMM YYYY')
+              p#blurb= mainGallery.blurb.Type.md
   +sidebar()
     each gallery in galleries
       .col-xs-10.no-float.center
