@@ -14,7 +14,7 @@ var Testimonial = new keystone.List('Testimonial',{
 
 
 Testimonial.add({
-    quote: {type: Types.Text, required: true},
+    quote: {type: Types.Text},
     page:{type: Types.Relationship, ref:'Page', index:true},
     name: {type: Types.Name},
     publishedOn: { type: Types.Date, default: Date.now, noedit: true, index: true }
