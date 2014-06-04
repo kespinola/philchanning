@@ -33,6 +33,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="about.jade" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/views/about.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16225961" vertical-offset="0" max-vertical-offset="832">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -43,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testimonials.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="testimonials.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/testimonials.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28846154" vertical-offset="0" max-vertical-offset="832">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,8 +76,18 @@
       <file leaf-file-name="site.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/styles/site.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-66.875" vertical-offset="0" max-vertical-offset="2355">
-              <caret line="107" column="28" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+            <state vertical-scroll-proportion="-28.125" vertical-offset="300" max-vertical-offset="2370">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mq.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/styles/site/mq.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="1125">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,7 +137,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/public/styles/site/mq.less" />
         <option value="$PROJECT_DIR$/templates/layouts/default.jade" />
         <option value="$PROJECT_DIR$/templates/mixins/cycle2.jade" />
         <option value="$PROJECT_DIR$/models/experiences.js" />
@@ -125,15 +144,16 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/views/about.js" />
         <option value="$PROJECT_DIR$/models/pages.js" />
-        <option value="$PROJECT_DIR$/templates/views/about.jade" />
         <option value="$PROJECT_DIR$/templates/mixins/client.jade" />
         <option value="$PROJECT_DIR$/templates/mixins/testimonial.jade" />
         <option value="$PROJECT_DIR$/public/styles/site/about.less" />
         <option value="$PROJECT_DIR$/templates/views/gallery.jade" />
         <option value="$PROJECT_DIR$/public/styles/site/gallery.less" />
-        <option value="$PROJECT_DIR$/public/styles/site.less" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
         <option value="$PROJECT_DIR$/models/testimonials.js" />
+        <option value="$PROJECT_DIR$/public/styles/site.less" />
+        <option value="$PROJECT_DIR$/public/styles/site/mq.less" />
+        <option value="$PROJECT_DIR$/templates/views/about.jade" />
       </list>
     </option>
   </component>
@@ -207,7 +227,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="site.less&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site.less&#10;galler&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/gallery.less&#10;about.&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/about.less&#10;client&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/client.jade&#10;about&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/routes/views/about.js&#10;scrol&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/scrollspy-page.jade&#10;abou&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/views/about.jade&#10;defa&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/layouts/default.jade&#10;side&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/sidebar.jade&#10;cyc&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/cycle2.jade&#10;site&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/lib/fontawesome/src/assets/js/site.js&#10;site.&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site.less&#10;defaul&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/layouts/default.jade&#10;cy&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/cycle2.jade&#10;app&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/app.js&#10;gall&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/views/gallery.jade&#10;scr&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/scrollspy-page.jade&#10;sp&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/scrollspy-page.jade&#10;&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/app.js&#10;gal&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/models/galleries.js&#10;varia&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/variables.less&#10;clien&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/client.jade&#10;default&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/layouts/default.jade&#10;spy&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/scrollspy-page.jade&#10;var&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/variables.less&#10;scroll&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/scrollspy-page.jade&#10;galle&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/gallery.less&#10;bootst&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/bootstap-carousel.jade&#10;boot&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/bootstap-carousel.jade&#10;about.jade&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/views/about.jade&#10;site.js&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/lib/fontawesome/src/3.2.1/assets/js/site.js&#10;site.j&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/lib/fontawesome/src/assets/js/site.js&#10;conta&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/contact.less&#10;contact&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/views/contact.js&#10;clients&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/models/clients.js&#10;ap&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/app.js&#10;cl&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/client.jade&#10;ab&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/views/about.jade&#10;cli&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/client.jade&#10;exp&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/experience.jade&#10;page&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/models/pages.js&#10;rese&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/reset.less&#10;nav&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/bootstrap/navbar.less&#10;/r&#9;null&#9;null&#10;page.&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/models/pages.js&#10;experi&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/experience.jade&#10;less&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/lesshat.less&#10;cont&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/views/contact.jade&#10;va&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/variables.less&#10;section&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/models/section.js" />
+    <property name="SearchEverywhereHistoryKey" value="about.&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/views/about.jade&#10;mq&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/mq.less&#10;site.less&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site.less&#10;galler&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/gallery.less&#10;client&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/client.jade&#10;about&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/routes/views/about.js&#10;scrol&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/scrollspy-page.jade&#10;abou&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/views/about.jade&#10;defa&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/layouts/default.jade&#10;side&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/sidebar.jade&#10;cyc&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/cycle2.jade&#10;site&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/lib/fontawesome/src/assets/js/site.js&#10;site.&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site.less&#10;defaul&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/layouts/default.jade&#10;cy&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/cycle2.jade&#10;app&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/app.js&#10;gall&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/views/gallery.jade&#10;scr&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/scrollspy-page.jade&#10;sp&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/scrollspy-page.jade&#10;&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/app.js&#10;gal&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/models/galleries.js&#10;varia&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/variables.less&#10;clien&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/client.jade&#10;default&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/layouts/default.jade&#10;spy&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/scrollspy-page.jade&#10;var&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/variables.less&#10;scroll&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/scrollspy-page.jade&#10;galle&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/gallery.less&#10;bootst&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/bootstap-carousel.jade&#10;boot&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/bootstap-carousel.jade&#10;about.jade&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/views/about.jade&#10;site.js&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/lib/fontawesome/src/3.2.1/assets/js/site.js&#10;site.j&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/lib/fontawesome/src/assets/js/site.js&#10;conta&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/contact.less&#10;contact&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/views/contact.js&#10;clients&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/models/clients.js&#10;ap&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/js/app.js&#10;cl&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/client.jade&#10;ab&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/views/about.jade&#10;cli&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/client.jade&#10;exp&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/experience.jade&#10;page&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/models/pages.js&#10;rese&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/reset.less&#10;nav&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/bootstrap/navbar.less&#10;/r&#9;null&#9;null&#10;page.&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/models/pages.js&#10;experi&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/mixins/experience.jade&#10;less&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/lesshat.less&#10;cont&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/templates/views/contact.jade&#10;va&#9;FILE&#9;file:///Users/ksespinola/web-projects/philchanning.com/public/styles/site/variables.less" />
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../chyla-walsh-yoga" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -671,14 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/site/mq.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="1125">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/mixins/cycle2.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
@@ -770,14 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/views/about.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64171124" vertical-offset="0" max-vertical-offset="935">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/views/gallery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2669903" vertical-offset="0" max-vertical-offset="618">
@@ -794,22 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/site/gallery.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="540">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/site.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-66.875" vertical-offset="0" max-vertical-offset="2355">
-          <caret line="107" column="28" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2003" max-vertical-offset="2835">
@@ -820,8 +808,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/testimonials.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28846154" vertical-offset="0" max-vertical-offset="832">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/site/gallery.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="540">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/site.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.125" vertical-offset="300" max-vertical-offset="2370">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/site/mq.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="1125">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/views/about.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16225961" vertical-offset="0" max-vertical-offset="832">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
         </state>
       </provider>
