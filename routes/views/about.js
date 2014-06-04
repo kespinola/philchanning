@@ -6,7 +6,7 @@ var keystone = require('keystone'),
 
 var Page = keystone.list('Page');
 var Categories = keystone.list('ClientCategory');
-var Experiences = keystone.list('Experience');
+var Testimonials = keystone.list('Testimonial');
 var Sections = keystone.list('Section');
 var Clients = keystone.list('Client');
 
@@ -16,17 +16,17 @@ exports = module.exports = function(req, res) {
         locals = res.locals;
 
     locals.data = {
-        experiences: [],
+        testimonials: [],
         categories: []
     };
 
     // Set locals
     locals.section = 'about';
 
-//Peform view queries
+//Perform view queries
     view.query('categories', Categories.model.find().sort('name'));
     view.query('clients', Clients.model.find().sort('publishedOn'));
-    view.query('experiences', Experiences.model.find().sort('publishedOn'));
+    view.query('testimonials', Testimonials.model.find().sort('publishedOn'));
     view.query('sections', Sections.model.find().sort('label'));
     view.query('page',Page.model.findOne().where('slug','about'));
 

@@ -15,17 +15,17 @@
   #Prev, #Next{position:fixed; top:40%; z-index:3000;}
   #Prev{right:5px}
   #Next{left:5px}
-  #Info{width:75%; margin:0 auto; padding:1% 0;
+  #Info{margin:0 auto; padding:1% 0;
     h1{font-weight:bold; font-size:1.8em;}
   }
+  #blurb{margin: 0 0 20px 0;}
   #Covers{position:fixed; right:0; width:25%; height:95vh; background: @bg-secondary; overflow:auto; padding-top:30px;}
   .secondary-nav{border-top-left-radius:10px; border-top-right-radius:10px;}
   .main-module{margin:20px auto 60px auto; .secondary-nav(); padding:85px 0 0 0;}
   .direction-btn{
     &.hidden{display:none;}
   }
-  .cycle-pager{ text-align:center;
-    img{ display:inline-block; margin-right:20px;}
-    img:nth-child(3){margin-right:0;}
+  .cycle-pager{ text-align:center;}
+  .pager-wrapper{.size(205px, 150px); display:block; overflow:hidden; float:left; margin: 0 20px 20px 0;
   }
 }

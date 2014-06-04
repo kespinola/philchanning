@@ -1,5 +1,5 @@
 extends ../layouts/default
-include ../mixins/experience
+include ../mixins/testimonial
 include ../mixins/client
 include ../mixins/scrollspy-page
 
@@ -29,13 +29,13 @@ block content
           .row.clearfix
             each client in clients
               +client(client)
-      if experiences.length
-        section#experiences
+      if testimonials.length
+        section#testimonials
           h1
-            | Experiences
+            | Testimonials
           .row.clearfix
-            each experience in experiences
-              +experience(experience)
+            each testimonial in testimonials
+              +testimonial(testimonial)
 
 block js
   script(src='/js/views/about.js')

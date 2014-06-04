@@ -1,0 +1,11 @@
+//Created by ksespinola on 5/8/14.
+
+mixin testimonial(testimonial)
+  .col-sm-6
+    article.card
+      .card-body: blockquote
+        p
+        | "#{testimonial.quote}"
+        footer: cite(title="#{testimonial.name.first} #{testimonial.name.last}")
+          | #{testimonial.name.first} #{testimonial.name.last}
+

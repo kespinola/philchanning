@@ -8,7 +8,7 @@ mixin client(client)
       h1= client.name
       .container-fluid
         .row
-          .col-sm-6.col-sm-offset-3.center
+          .col-sm-6.col-sm-offset-3.center.no-float
             a.btn.btn-lg.btn-info.btn-block.fa.fa-globe(target='_blank',href=client.website, role='button')
       .overlay(data-id='#{client._id}')
         p= client.description.md

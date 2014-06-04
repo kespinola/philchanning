@@ -32,7 +32,7 @@ function App() {
             next:'#Next',
             timeout:0,
             swipe:true,
-            pagerTemplate:"<a href='#'><img src='{{src}}' class='img-responsive' width=250 height=250></a>",
+            pagerTemplate:"<a class='pager-wrapper' href='#'><img src='{{src}}' class='img-responsive' width=250 height=250></a>",
             centerHorz:true,
             centerVert:true
         }
@@ -153,7 +153,7 @@ $document.ready(function () {
     app.initialize();
 });
 
-$document.on('click', '.item-thumb', function (e) {
+$document.on('click touchstart', '.item-thumb', function (e) {
     var id = $(this).data('id');
     app.getGallery(id);
 });

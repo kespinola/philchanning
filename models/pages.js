@@ -20,14 +20,14 @@ Page.add({
     name: { type: Types.Name, collapse:true},
     tagline: {type: Types.Text,collapse:true},
     sections: {type: Types.Relationship, ref:'Section', many:true},
-    experiences: {type:Types.Relationship, ref:'Experience', many:true},
+    testimonials: {type:Types.Relationship, ref:'Testimonial', many:true},
     clients: {type:Types.Relationship, ref:'Client', many:true},
     blurb: {type: Types.Markdown, collapse:true },
     publishedOn: { type: Types.Date, default: Date.now, noedit: true, index: true }
 });
 
 Page.relationship({ref:'Client', path:'clients'});
-Page.relationship({ref:'Experience', path:'experiences'});
+Page.relationship({ref:'Testimonials', path:'testimonials'});
 Page.relationship({ref:'Section', path:'sections'});
 
 
