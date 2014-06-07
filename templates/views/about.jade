@@ -5,15 +5,23 @@ include ../mixins/scrollspy-page
 
 block content
   #About
+    -if(page.profileImage != undefined || page.tagline != undefined){
     .jumbotron(data-auto='false'): .container-fluid
       .row
         .col-xs-8.col-xs-offset-1.col-sm-4.col-sm-offset-1.col-md-4.col-md-offset-1
+          -if(page.profileImage != undefined){
           img(src= page._.profileImage.limit(200,200)).img-circle.img-responsive
+          -}
         .col-xs-12.col-sm-6.col-md-6.left-border
           blockquote
+            -if(page.tagline != undefined){
             h1
               |"#{page.tagline}"
-    .top-bg-banner.full-center-bg(style="background-image:url(#{page.images[0].url})")
+            -}
+    -}
+    - if(page.images[0] != undefined){
+      .top-bg-banner.full-center-bg(style="background-image:url(#{page.images[0].url})")
+      -}
     +scrollspy-page(page)
       if sections.length
         section#sections
