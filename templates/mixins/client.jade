@@ -3,12 +3,20 @@
 mixin client(client)
   .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-0.col-md-4.col-lg-3
     article.card
+      -if(client.logo.url != undefined){
       .banner.full-center-bg(style='background-image: url(#{client.logo.url})')
+      -}
+        -if(client.descrption != undefined){
         i.icon-btn.fa.fa-comment(data-id='#{client._id}')
+        -}
       h1= client.name
       .container-fluid
+        -if(client.website != ''){
         .row
           .col-sm-6.col-sm-offset-3.center.no-float
             a.btn.btn-lg.btn-info.btn-block.fa.fa-globe(target='_blank',href=client.website, role='button')
+        -}
+      -if(client.descrption != undefined){
       .overlay(data-id='#{client._id}')
         p= client.description.md
+      -}
