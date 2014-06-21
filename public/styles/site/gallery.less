@@ -12,9 +12,9 @@
 
   > .container-fluid{position:absolute; right:310px; left:0;}
   h2{font-size:1.7em}
-  #Prev, #Next{position:fixed; top:40%; z-index:3000;}
-  #Prev{right:5px}
-  #Next{left:5px}
+  #Prev, #Next{position:fixed; top:40%; z-index:3000;
+    &:hover{.opacity(.7); color:@white;}
+  }
   #Info{margin:0 auto; padding:1% 0;
     h1{font-weight:bold; font-size:1.8em;}
   }

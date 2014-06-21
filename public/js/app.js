@@ -31,7 +31,6 @@ function App() {
             prev:'#Prev',
             next:'#Next',
             timeout:0,
-            swipe:true,
             pagerTemplate:"<a class='pager-wrapper' href='#'><img src='{{src}}' class='img-responsive' width=250 height=250></a>",
             centerHorz:true,
             centerVert:true
@@ -156,6 +155,10 @@ $document.ready(function () {
 $document.on('click touchstart', '.item-thumb', function (e) {
     var id = $(this).data('id');
     app.getGallery(id);
+});
+
+$('#Gallery').click(function(){
+    app.slideshow.$el.cycle('next');
 });
 
 $document.on('click', '.icon-btn', function (e) {

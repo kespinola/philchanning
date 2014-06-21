@@ -8,9 +8,9 @@ include ../mixins/sidebar
 block content
   - var mainGallery = galleries[0]
   +cycle2(mainGallery.images, 'FullBg', true)
+  #Next.fa.fa-chevron-right.fa-4x.btn.direction-btn
+  #Prev.fa.fa-chevron-left.fa-4x.btn.direction-btn
   #Gallery.overflow-hidden
-    #Next.fa.fa-chevron-left.fa-4x.btn.direction-btn
-    #Prev.fa.fa-chevron-right.fa-4x.btn.direction-btn
     .container-fluid: .row
       .main-module.col-sm-10.no-float.active.hidden-xs
         nav.secondary-nav.navbar.navbar-default.navbar-static.col-xs-10.col-md-8.col-lg-10(role='navigation')
@@ -31,3 +31,6 @@ block content
           h1= gallery.name
   +cycle2-template()
   +pager-template()
+
+block js
+  script(src='js/views/gallery.js', type='text/javascript')
